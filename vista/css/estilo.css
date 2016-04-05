@@ -1,0 +1,22 @@
+html, body{
+	width:100%;
+	height:100%;
+	overflow-x: hidden;
+	background-image: url("../img/fondo.jpg");
+	background-size:cover;
+	background-attachment: fixed;
+}
+
+.container{
+	color:white;
+	background-color:rgba(20,20,20,0.7);
+	 
+}
+
+#contIndex h1{
+	text-align:center;
+}
+
+.btn-primary{
+	margin: 0 auto;
+}
