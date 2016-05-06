@@ -16,10 +16,10 @@ body .container {
 .fondo{
 	width:100%;
 	height:100%;
-	background-image: url('../images/fondo.png');
-	/*-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-    /*filter: grayscale(100%);*/
+	background-image: url('../images/fondo.jpg');
+	background-size:cover
 }
+
 
 .container .grid {
   max-width: 900px;
@@ -32,6 +32,7 @@ body .container {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
+  
 }
 
 .container.mdl-layout .mdl-layout__content {
@@ -49,7 +50,7 @@ body .container {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-   min-height:0;
+   
 }
 .container .mdl-card__title {
   padding: 16px;
@@ -293,7 +294,7 @@ body .container {
   background-color: #263238;
 }
 .mensaje{
-	border-radius:7px;	
+	/* border-radius:7px; */	
 }
 
 .msgHeader{
@@ -304,7 +305,7 @@ body .container {
 .container .minilogo {
   width: 44px;
   height: 44px;
-  background-image: url('../images/avatar.png');
+  background-image: url('/images/avatar.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -318,23 +319,29 @@ body .container {
   display: flex !important;
 }
  
-.container .mdl-mini-footer {
-  margin-top: 80px;
-  height: 120px;
+.mdl-mini-footer {
+  margin-top: 40px;
+  height: 100px;
   padding: 40px;
  	  -webkit-align-items: center;
       -ms-flex-align: center;
       -ms-grid-row-align: center;
   align-items: center;
   box-sizing: border-box;
+  
+	/* background-image: url('../images/fondo.jpg'); */
+	background-color: #595959;
+    color:white;
+    box-shadow: 0 0 5px #000;
 }
 
-	
 .tops{
-	background-image: url('../images/tops.png');
-	-webkit-filter: grayscale(65%); /* Chrome, Safari, Opera */
-    filter: grayscale(65%);
-	border-radius:10px;
+	background-image: url('../images/tops.jpg');/* 
+	-webkit-filter: grayscale(65%); Chrome, Safari, Opera
+    filter: grayscale(65%); */
+    filter:hue-rotate(90deg);
+    -webkit-filter:hue-rotate(90deg);
+	/* border-radius:10px; */
 	margin:10px auto;
 	}
 .mdl-list__item--two-line{
@@ -347,3 +354,18 @@ body .container {
 	color:white;
 }
 
+.menu{
+ 	background-color:#DC483A !important; 	
+ 	min-height:50px;
+    color:white;
+}
+
+#botonMenu{
+	margin:10px;
+}
+
+#tituloLocal{
+	 text-shadow: 1px 1px #DC483A, -1px -1px 0 #DC483A, 1px -1px 0 #DC483A, -1px 1px 0 #DC483A;
+	
+	
+}
