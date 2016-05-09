@@ -16,7 +16,7 @@
 	color: #aaa;
 	font-weight: bold;
 	font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	-webkit-appearance: none; /* for box shadows to show on iOS */
+	-webkit-appearance: none;
 }
 
 .input__field:focus {
@@ -56,31 +56,12 @@
 	box-shadow:none !important;
 }
 
-.mdl-mini-footer {
-    margin-top: 10px;
-    position: absolute;
-    padding: 40px;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    background-color: #595959;
-    color: white;
-    box-shadow: 0 0 5px #000;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Individual styles */
-
-/* Shoko */
-.input--shoko {
+.input--efecto {
 	overflow: hidden;
 	padding-bottom: 5em;
 }
 
-.input__field--shoko {
+.input__field--efecto {
 	padding: 0;
 	margin-top: 1.2em;
 	width: 100%;
@@ -89,7 +70,7 @@
 	font-size: 1.55em;
 }
 
-.input__label--shoko {
+.input__label--efecto {
 	position: absolute;
 	top: 2em;
 	left: 0;
@@ -109,7 +90,7 @@
 	transition-timing-function: ease-out;
 }
 
-.graphic--shoko {
+.graphic--efecto {
 	stroke: #595959;
 	pointer-events: none;
 	stroke-width: 2px;
@@ -122,15 +103,15 @@
 	transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
 } 
 
-.input__field--shoko:focus + .input__label--shoko,
-.input--filled .input__label--shoko {
+.input__field--efecto:focus + .input__label--efecto,
+.input--filled .input__label--efecto {
 	color: #595959;
 	-webkit-transform: translate3d(0, 3.5em, 0) scale3d(0.85, 0.85, 1);
 	transform: translate3d(0, 3.5em, 0) scale3d(0.85, 0.85, 1);
 }
 
-.input__field--shoko:focus ~ .graphic--shoko,
-.input--filled .graphic--shoko {
+.input__field--efecto:focus ~ .graphic--efecto,
+.input--filled .graphic--efecto {
 	stroke: #595959;
 	-webkit-transform: translate3d(-66.6%, 0, 0);
 	transform: translate3d(-66.6%, 0, 0);

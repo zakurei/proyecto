@@ -11,13 +11,13 @@
 						<div class="mdl-tooltip" for="locales">Locales</div>
 						<a id="mensajes" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="mensajes.php"><div class="material-icons">message</div></a>
 						<div class="mdl-tooltip" for="mensajes">Mensajes</div>
-						<a id="mapa" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="#"><div class="material-icons">my_location</div></a>
+						<a id="mapa" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="mapa.php"><div class="material-icons">my_location</div></a>
 						<div class="mdl-tooltip" for="mapa">Mapa</div>			
 						<a id="registro" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="registro.php"><div class="material-icons">assignment</div></a>
 						<div class="mdl-tooltip" for="registro">Reg�strate</div>				
 						<a id="entrar" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="login.php"><div class="material-icons">account_circle</div></a>						
 						<div class="mdl-tooltip" for="entrar">Iniciar Sesi�n</div>					
-						<a id="contacto" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="#"><div class="material-icons">email</div></a>
+						<a id="contacto" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="contacto.php"><div class="material-icons">email</div></a>
 						<div class="mdl-tooltip" for="contacto">Contacto</div>
 					
 					<!-- Search -->

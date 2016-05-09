@@ -1,38 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<?php include_once ("head.php")?>
+
 <title>Mensajes</title>
 
-<!-- Add to homescreen for Chrome on Android -->
-<meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
-<!-- Add to homescreen for Safari on iOS -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Material Design Lite">
-<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
-<!-- Tile icon for Win8 (144x144 + tile color) -->
-<meta name="msapplication-TileImage"
-	content="images/touch/ms-touch-icon-144x144-precomposed.png">
-<meta name="msapplication-TileColor" content="#3372DF">
-
-
-
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet"
-	href="https://code.getmdl.io/1.1.3/material.grey-orange.min.css">
-<link rel="stylesheet" href="../css/styles.css">
-
-<script src="js/material.min.js"></script>
 <style>
 #view-source {
 	position: fixed;
@@ -45,13 +18,14 @@
 }
 </style>
 </head>
-<body>
+<body id="mensajes">
 <div class="fondo">
 	<div class="container mdl-layout mdl-js-layout has-drawer is-upgraded">
 	<?php include_once ("menu.php")?>
+	
 		<main class="mdl-layout__content">
 		<div class="grid mdl-grid">
-		<!--  <div class="mdl-cell--1-col"></div>-->
+		
 		<!-- Top usuarios con más mensajes -->
 			<div class="mdl-card tops mdl-cell mdl-cell--6-col">
 				<ul class="mdl-list">
@@ -115,7 +89,6 @@
 					</span></li>
 				</ul>
 			</div>
-<!--  <div class="mdl-cell--1-col"></div>-->
 
 
 				<!-- Sacar lista de mensajes -->
@@ -162,19 +135,10 @@
 				</div>
 			</div>
 		</div>
-		<footer class="mdl-mini-footer">
-			<div class="mdl-mini-footer__left-section">
-				<ul class="mdl-mini-footer__link-list">
-					<li><a href="#">Terminos legales</a></li>
-					<li><a href="#">Contacto</a></li>
-				</ul>
-			</div>
-
-			<div class="mdl-mini-footer__right-section">
-				<div class="mdl-logo"><b>© 2011 Iván Sánchez Fernández all rights
-					reserved</b></div>
-			</div>
-		</footer> </main>
+		
+		<?php include_once ("footer.php")?>
+		
+		 </main>
 		<div class="mdl-layout__obfuscator"></div>
 	</div>
 </div>

@@ -18,42 +18,12 @@
 -->
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description"
-	content="A front-end template that helps you build fast, modern mobile web apps.">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<?php include_once ("head.php")?>
 
 <title>Login</title>
 
-<!-- Add to homescreen for Chrome on Android -->
-<meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" sizes="192x192"
-	href="images/touch/chrome-touch-icon-192x192.png">
 
-<!-- Add to homescreen for Safari on iOS -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Material Design Lite">
-<link rel="apple-touch-icon-precomposed"
-	href="apple-touch-icon-precomposed.png">
-
-<!-- Tile icon for Win8 (144x144 + tile color) -->
-<meta name="msapplication-TileImage"
-	content="images/touch/ms-touch-icon-144x144-precomposed.png">
-<meta name="msapplication-TileColor" content="#3372DF">
-
-
-<link
-	href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'
-	rel='stylesheet' type='text/css'>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
-<link rel="stylesheet"
-	href="https://code.getmdl.io/1.1.3/material.grey-orange.min.css">
-
-<link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/set2.css">
 <style>
 #view-source {
@@ -67,7 +37,7 @@
 }
 </style>
 </head>
-<body>
+<body id="registro">
 
 	<div class="fondo">
 		<div
@@ -80,22 +50,18 @@
 			<div class="grid mdl-grid">
 				<div
 					class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-					<div class="mdl-card__media mdl-color-text--grey-50"
-						style="background-image: url('../images/road_big.jpg')">
-						<h3 style="color: #2EFE2E">
-							<b>Jokers Club</b>
-						</h3>
-
+					<div class="mdl-card__media mdl-color-text--grey-50">
+					<img id="fotoLocal" alt="" src="../images/cocobongos.jpg">
 					</div>
 					<div class="mdl-color-text--grey-700 mdl-card__supporting-text ">
 
 						<div
 							class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--6-col ">
-							<span class="input input--shoko"> <input
-								class="input__field input__field--shoko" type="text" id="correo">
-								<label class="input__label input__label--shoko" for="correo"> <span
-									class="input__label-content input__label-content--shoko">Usuario</span>
-							</label> <svg class="graphic graphic--shoko" width="300%"
+							<span class="input input--efecto"> <input
+								class="input__field input__field--efecto" type="text" id="correo">
+								<label class="input__label input__label--efecto" for="correo"> <span
+									class="input__label-content input__label-content--efecto">Usuario</span>
+							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
 						<path
 										d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
@@ -108,12 +74,12 @@
 						<div
 							class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--6-col">
 
-							<span class="input input--shoko"> <input
-								class="input__field input__field--shoko" type="password"
-								id="pass"> <label class="input__label input__label--shoko"
+							<span class="input input--efecto"> <input
+								class="input__field input__field--efecto" type="password"
+								id="pass"> <label class="input__label input__label--efecto"
 								for="pass"> <span
-									class="input__label-content input__label-content--shoko">Email</span>
-							</label> <svg class="graphic graphic--shoko" width="300%"
+									class="input__label-content input__label-content--efecto">Email</span>
+							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
 						<path
 										d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
@@ -126,11 +92,11 @@
 
 						<div
 							class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--6-col ">
-							<span class="input input--shoko"> <input
-								class="input__field input__field--shoko" type="text" id="correo">
-								<label class="input__label input__label--shoko" for="correo"> <span
-									class="input__label-content input__label-content--shoko">Password</span>
-							</label> <svg class="graphic graphic--shoko" width="300%"
+							<span class="input input--efecto"> <input
+								class="input__field input__field--efecto" type="text" id="correo">
+								<label class="input__label input__label--efecto" for="correo"> <span
+									class="input__label-content input__label-content--efecto">Password</span>
+							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
 						<path
 										d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
@@ -141,27 +107,19 @@
 						</div>
 						
 					</div>
+					<div class="mdl-card__actions mdl-card--border" style="text-align:center;">
+							<button style="color:white; background-color:#DC483A;"
+								class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Log
+								in</button>
+						</div>
 				</div>
 			</div>
-			<footer class="mdl-mini-footer">
-				<div class="mdl-mini-footer__left-section">
-					<ul class="mdl-mini-footer__link-list">
-						<li><a href="#">Terminos legales</a></li>
-						<li><a href="#">FAQ</a></li>
-					</ul>
-				</div>
-
-				<div class="mdl-mini-footer__right-section">
-					<div class="mdl-logo">
-						<b>© 2016 Iván Sánchez Fernández all rights reserved</b>
-					</div>
-				</div>
-			</footer> </main>
+			
+			<?php include_once ("footer.php")?>
+			
+			 </main>
 		</div>
 	</div>
-	<script src="../js/classie.js"></script>
-	<script src="../js/material.min.js"></script>
-
 
 	<!-- Evitamos que el texto que se mueve de los inputs no vuelva a introducirse dentro de
 	los inputs al quitar el foco del input. -->
@@ -202,6 +160,7 @@
 		</script>
 
 	<script>
+	
 			// EXPRESIONES REGULARES
 			var NO_EMPTY =  /^\s*$/;
 			var ONLY_NUMBERS = /^([0-9])*$/;
