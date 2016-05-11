@@ -19,5 +19,6 @@
 <script src="js/material.min.js"></script>
 <script src="js/material.min.js.map"></script>
 <script src="js/material.js"></script>
-<script src="jquery-1.12.2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="../js/classie.js"></script>
+<script src="js/jssor.slider.mini.js"></script>

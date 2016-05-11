@@ -1,3 +1,12 @@
+#view-source {
+	position: fixed;
+	display: block;
+	right: 0;
+	bottom: 0;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	z-index: 900;
+}
 body {
     background-size: cover;
     background-attachment: fixed;
@@ -294,10 +303,18 @@ body .container {
   background-color: #263238;
 }
 
-.msgHeader{
-	  background-color: #263238;
-}
 
+.texto{
+	height:250px;
+	background-image: url('/images/mensajes.jpg');	
+	background-size:100% 100%;
+
+   filter:hue-rotate(70deg);
+    -webkit-filter:hue-rotate(70deg);
+     
+   /*  -webkit-filter: grayscale(1);
+    filter: grayscale(1); */
+}
 
 .container .minilogo {
   width: 44px;
@@ -332,9 +349,10 @@ body .container {
 }
 
 .tops{
-	background-image: url('../images/tops.jpg');
-    filter:hue-rotate(90deg);
-    -webkit-filter:hue-rotate(90deg);
+	color:black !important;
+	background-image: url('/images/tops.jpg');	
+    filter:hue-rotate(250deg);
+    -webkit-filter:hue-rotate(250deg);
 	margin:10px auto;
 	}
 .mdl-list__item--two-line{
@@ -372,5 +390,53 @@ body .container {
 	position:absolute;
 	top: 250px; 
     left: 20px; 
-	text-shadow: 1px 1px #DC483A, -1px -1px 0 #DC483A, 1px -1px 0 #DC483A, -1px 1px 0 #DC483A;
+    color:#DC483A;
+	text-shadow: 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+}
+#mensajes .mdl-list{
+	padding: 0% 27% !important;
+}
+.mdl-tabs__tab{
+	color:white !important;
+}
+
+.galeria.mdl-card {
+  width: 279px;
+  height: 256px;
+  background: url('../images/stereo.jpg') center / cover;
+}
+.galeria > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.galeria__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.botonGaleria{
+	margin:0 auto;
+	color:white;
+	background-color:#DC483A;
+}
+.galeria{
+	margin:5px;
+}
+.galeria > .mdl-card__actions{
+	text-align:center;
+	margin-bottom:5px;
+}
+#local .mdl-tabs__tab, #local .mdl-list__item {
+	color:black !important;
+}
+#local .ofertas{
+	padding: 0% 27% !important;
+}
+#local .info{
+	padding: 0% 17% !important;
+}
+
+#local .mdl-list__item--two-line .mdl-list__item-primary-content{
+	display:inherit;
 }
