@@ -20,7 +20,7 @@
 					<div class="mdl-card__media mdl-color-text--grey-50">
 					
 					
-						<img id="fotoLocal" alt="" src="../images/alex.jpg">
+						<img id="fotoLocal" alt="" src="../images/dreams.jpg">
 							<h3><b id="tituloLocal">Jokers Club</b></h3>
 					</div>
 					
@@ -73,7 +73,7 @@
 					<?php include_once ("slider.php")  ?>
 					<br/>
 					<div class="mdl-color-text--primary-contrast mdl-card__supporting-text containerComents">
-						<form>
+						<form method="post" action="local.php?id=jokers" class="mensaje">
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 								<textarea rows=1 class="mdl-textfield__input" id="comentario"></textarea>
 								<label for="comentario" class="mdl-textfield__label">Escribe tu comentario</label>
@@ -83,6 +83,15 @@
 									class="visuallyhidden">Escribe un comentario</span>
 							</button>
 						</form>
+						<?php
+							if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true){
+							}else {
+								echo'
+						  	<a id="localGaleria" class="mdl-button mdl-js-button mdl-js-ripple-effect btnAviso" href="registro.php">Para escribir mensajes debes estar registrado</a>
+								
+								';
+							}
+							?>
 						<div class="comentarios mdl-color-text--grey-700">
 							<header class="headerComent">
 								<img src="../images/usuarioAnonimo.jpg" class="avatarMsg">

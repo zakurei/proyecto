@@ -25,7 +25,7 @@ body .container {
 .fondo{
 	width:100%;
 	height:100%;
-	background-image: url('../images/fondo.jpg');
+	background-image: url('../images/fondo2.jpg');
 	background-size:cover
 }
 
@@ -351,8 +351,8 @@ body .container {
 .tops{
 	color:black !important;
 	background-image: url('/images/tops.jpg');	
-    filter:hue-rotate(250deg);
-    -webkit-filter:hue-rotate(250deg);
+    filter:hue-rotate(170deg);/*250*/
+    -webkit-filter:hue-rotate(180deg);
 	margin:10px auto;
 	}
 .mdl-list__item--two-line{
@@ -366,7 +366,7 @@ body .container {
 }
 
 .menu{
- 	background-color:#DC483A !important; 	
+ 	background-color:#ce318d; 	
  	min-height:50px;
     color:white;
 }
@@ -403,7 +403,6 @@ body .container {
 .galeria.mdl-card {
   width: 279px;
   height: 256px;
-  background: url('../images/stereo.jpg') center / cover;
 }
 .galeria > .mdl-card__actions {
   height: 52px;
@@ -419,6 +418,9 @@ body .container {
 	margin:0 auto;
 	color:white;
 	background-color:#DC483A;
+	border-radius:50%;
+	border:1px solid #ce318d;
+
 }
 .galeria{
 	margin:5px;
@@ -440,3 +442,56 @@ body .container {
 #local .mdl-list__item--two-line .mdl-list__item-primary-content{
 	display:inherit;
 }
+
+.container .mdl-layout__header-row .usuarioMenu {
+	width:auto !important;
+	height:64px;
+	border-right: 1px solid white;
+	
+}
+.mdl-layout__header-row .usuarioMenu .autor{
+	color: white;
+	font-weight:bold;
+}
+.mdl-layout-title{
+	margin-left:8px;
+}
+.mdl-layout__header-row{
+	padding: 0 40px 0 10px;
+}
+.btnAviso{
+	margin-bottom:10px;
+	border:1px solid #ce318d;
+	background-color:#ce318d;
+	margin:0 auto;
+	color:white;
+	
+	
+}
+
+#local .mdl-textfield__input{
+	    border-bottom: 1px solid #ce318d;
+}
+
+#local .mdl-textfield__label {
+	color:#ce318d;
+}
+ #local .container-local .containerComents > form button{
+	 background-color:#ce318d;
+ }
+#seleccionLocal #localGaleria, #seleccionLocal .botonGaleria{
+	width:40px !important;
+	height:40px !important;
+	min-width:inherit;
+	padding:0;
+	
+}
+#seleccionLocal .galeria > .mdl-card__actions{
+	height:60px;
+}
+
+#localGaleria .material-icons{
+	margin:0;
+}
+
+

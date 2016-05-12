@@ -1,25 +1,13 @@
 <?php session_start()?>
 <!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
 <html lang="en">
 <head>
 
-<?php include_once ("head.php")?>
+<?php 
+include_once ("head.php");
+?>
+<script src="js/util.js"></script>
 
 <title>Login</title>
 
@@ -46,9 +34,9 @@
 						<div
 							class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--6-col ">
 							<span class="input input--efecto"> <input
-								class="input__field input__field--efecto" type="text" id="correo">
-								<label class="input__label input__label--efecto" for="correo"> <span
-									class="input__label-content input__label-content--efecto">Usuario</span>
+								class="input__field input__field--efecto" type="text" id="usuario">
+								<label class="input__label input__label--efecto" for="usuario"> <span
+									class="input__label-content input__label-content--efecto usuario">Usuario</span>
 							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
 						<path
@@ -63,10 +51,10 @@
 							class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--6-col">
 
 							<span class="input input--efecto"> <input
-								class="input__field input__field--efecto" type="password"
-								id="pass"> <label class="input__label input__label--efecto"
-								for="pass"> <span
-									class="input__label-content input__label-content--efecto">Email</span>
+								class="input__field input__field--efecto" type="text"
+								id="email"> <label class="input__label input__label--efecto"
+								for="email"> <span
+									class="input__label-content input__label-content--efecto email">Email</span>
 							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
 						<path
@@ -81,9 +69,9 @@
 						<div
 							class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--6-col ">
 							<span class="input input--efecto"> <input
-								class="input__field input__field--efecto" type="text" id="correo">
-								<label class="input__label input__label--efecto" for="correo"> <span
-									class="input__label-content input__label-content--efecto">Password</span>
+								class="input__field input__field--efecto" type="password" id="password">
+								<label class="input__label input__label--efecto" for="password"> <span
+									class="input__label-content input__label-content--efecto password">Password</span>
 							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
 						<path
@@ -96,8 +84,8 @@
 						
 					</div>
 					<div class="mdl-card__actions mdl-card--border" style="text-align:center;">
-							<button style="color:white; background-color:#DC483A;"
-								class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Log
+							<button type ="submit" id="registrar" style="color:white;"
+								class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect btnAviso">Log
 								in</button>
 						</div>
 				</div>
@@ -108,72 +96,5 @@
 			 </main>
 		</div>
 	</div>
-
-	<!-- Evitamos que el texto que se mueve de los inputs no vuelva a introducirse dentro de
-	los inputs al quitar el foco del input. -->
-	<script>
-			(function() {
-				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-				if (!String.prototype.trim) {
-					(function() {
-						// Make sure we trim BOM and NBSP
-						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-						String.prototype.trim = function() {
-							return this.replace(rtrim, '');
-						};
-					})();
-				}
-
-				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-					// in case the input is already filled..
-					if( inputEl.value.trim() !== '' ) {
-						classie.add( inputEl.parentNode, 'input--filled' );
-					}
-
-					// events:
-					inputEl.addEventListener( 'focus', onInputFocus );
-					inputEl.addEventListener( 'blur', onInputBlur );
-				} );
-
-				function onInputFocus( ev ) {
-					classie.add( ev.target.parentNode, 'input--filled' );
-				}
-
-				function onInputBlur( ev ) {
-					if( ev.target.value.trim() === '' ) {
-						classie.remove( ev.target.parentNode, 'input--filled' );
-					}
-				}
-			})();
-		</script>
-
-	<script>
-	
-			// EXPRESIONES REGULARES
-			var NO_EMPTY =  /^\s*$/;
-			var ONLY_NUMBERS = /^([0-9])*$/;
-			var EMAIL = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-			// Debe tener mínimo: 1 minúscula, 1 mayúscula, 1 número y una longitud de 8 caracteres.
-			var PASSWORD = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
-			var DATE = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
-		
-			$(document).ready(function(){
-				$("input").blur(function(){
-					alert ("entra");
-					if ($(this).val().test (NO_EMPTY) == true  ){
-						$(this).css("color","red");
-						
-						}else{
-
-// 						|| $(this).val() == EMAIL
-
-					}
-				});
-
-				
-			});
-
-
-		</script>
 </body>
 </html>
