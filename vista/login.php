@@ -8,7 +8,7 @@
 <script src="js/util.js"></script>
 
 <title>Login</title>
-<link rel="stylesheet" href="../css/set2.css">
+<link rel="stylesheet" href="css/set2.css">
 </head>
 <body id="login">
 

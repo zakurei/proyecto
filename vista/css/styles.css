@@ -299,27 +299,30 @@ body .container {
   overflow: visible;
   z-index: 10;
 }
-.container .mensaje .mdl-card__title {
-  background-color: #263238;
-}
-
 
 .texto{
-	height:250px;
-	background-image: url('/images/mensajes.jpg');	
+	color: white !important;
+	height:250px;	
 	background-size:100% 100%;
+	background-color: rgba(18,139,177,0.3) ; 
 
-   filter:hue-rotate(70deg);
-    -webkit-filter:hue-rotate(70deg);
+   /* filter:hue-rotate(70deg);
+    -webkit-filter:hue-rotate(70deg); */
      
-   /*  -webkit-filter: grayscale(1);
-    filter: grayscale(1); */
+}
+.texto blockquote a{
+	opacity:inherit;
+} 
+.fondoTexto{
+	height: 250px;
+    background-size: 100% 100%;
+		background-image: url('../images/mensajes.jpg');
 }
 
 .container .minilogo {
   width: 44px;
   height: 44px;
-  background-image: url('/images/avatar.png');
+  background-image: url('../images/avatar.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -349,24 +352,20 @@ body .container {
 }
 
 .tops{
-	color:black !important;
-	background-image: url('/images/tops.jpg');	
-    filter:hue-rotate(170deg);/*250*/
-    -webkit-filter:hue-rotate(180deg);
+	background-color:#128BB1;
 	margin:10px auto;
 	}
 .mdl-list__item--two-line{
 	height: 0; 
 }
 .mdl-list__item{
-	color:white;
+	color: white;
 }
 .mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title{
-	color:white;
+	color: white;
 }
-
 .menu{
- 	background-color:#ce318d; 	
+ 	background-color:#424242; 	
  	min-height:50px;
     color:white;
 }
@@ -390,7 +389,7 @@ body .container {
 	position:absolute;
 	top: 250px; 
     left: 20px; 
-    color:#DC483A;
+    color:#E218B0;
 	text-shadow: 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
 }
 #mensajes .mdl-list{
@@ -462,7 +461,7 @@ body .container {
 .btnAviso{
 	margin-bottom:10px;
 	border:1px solid #ce318d;
-	background-color:#ce318d;
+	background-color:#424242;
 	margin:0 auto;
 	color:white;
 	
@@ -476,22 +475,26 @@ body .container {
 #local .mdl-textfield__label {
 	color:#ce318d;
 }
- #local .container-local .containerComents > form button{
+#local .container-local .containerComents > form button{
 	 background-color:#ce318d;
  }
-#seleccionLocal #localGaleria, #seleccionLocal .botonGaleria{
-	width:40px !important;
-	height:40px !important;
-	min-width:inherit;
-	padding:0;
-	
-}
 #seleccionLocal .galeria > .mdl-card__actions{
 	height:60px;
+	background:none;
 }
 
-#localGaleria .material-icons{
-	margin:0;
+#seleccionLocal #localGaleria{
+	color:#CCEA06;
 }
-
+#seleccionLocal .mdl-shadow--4dp {
+	box-shadow: none;
+}
+.menu, .menu .mdl-button .material-icons{
+		color:white;
+	
+}
+#breadCrumb{
+	text-transform: uppercase;
+	color:#CCEA06;
+}
 

@@ -5,6 +5,7 @@
 //Usuarios registrados/admin.
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true){
 	include_once ('../controladores/menu.php');
+	include_once ("../controladores/breadCrumbs.php");
 	
 	echo '
 		<div class="mdl-card__supporting-text usuarioMenu mdl-color-text--grey-600">
@@ -13,12 +14,17 @@ if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true){
 						<strong>'.$nombre.'</strong>
 					</div>
 				</div>
-		<span class="mdl-layout-title">MagaGuide</span>
+				<span class="mdl-layout-title">MagaGuide </span>'?>
+						
 		
+			<div class="mdl-layout-spacer" style="text-align:center;"><span id="breadCrumb" class="mdl-layout-title"></span></div>
+					
+				 <?php echo'
+				
 			<a id="home" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="index.php"><div class="material-icons">home</div></a>
 			<div class="mdl-tooltip" for="home">Home</div>
-			<a id="locales" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="seleccionLocal.php"><div class="material-icons">local_bar</div></a>						
-			<div class="mdl-tooltip" for="locales">Locales</div>
+			<a id="seleccionLocales" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="seleccionLocal.php"><div class="material-icons">local_bar</div></a>						
+			<div class="mdl-tooltip" for="seleccionLocales">Galeria Locales</div>
 			<a id="mensajes" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="mensajes.php"><div class="material-icons">message</div></a>
 			<div class="mdl-tooltip" for="mensajes">Mensajes</div>
 			<a id="mapa" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="mapa.php"><div class="material-icons">my_location</div></a>
@@ -34,13 +40,15 @@ if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true){
 } else {
 	
 	echo '
-			<span class="mdl-layout-title">MagaGuide</span>
+			<span class="mdl-layout-title">MagaGuide</span>'?>		
 		
-			<div class="mdl-layout-spacer"></div>
+			<div class="mdl-layout-spacer" style="text-align:center;"><span id="breadCrumb" class="mdl-layout-title"></span> </div>	 
+		
+			<?php echo'
 			<a id="home" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="index.php"><div class="material-icons">home</div></a>
 			<div class="mdl-tooltip" for="home">Home</div>
-			<a id="locales" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="seleccionLocal.php"><div class="material-icons">local_bar</div></a>						
-			<div class="mdl-tooltip" for="locales">Locales</div>
+			<a id="seleccionLocales" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="seleccionLocal.php"><div class="material-icons">local_bar</div></a>						
+			<div class="mdl-tooltip" for="seleccionLocales">Galeria Locales</div>
 			<a id="mensajes" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="mensajes.php"><div class="material-icons">message</div></a>
 			<div class="mdl-tooltip" for="mensajes">Mensajes</div>
 			<a id="mapa" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="mapa.php"><div class="material-icons">my_location</div></a>

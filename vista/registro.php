@@ -9,7 +9,7 @@ include_once ("head.php");
 ?>
 <script src="js/util.js"></script>
 
-<title>Login</title>
+<title>Registro</title>
 
 <link rel="stylesheet" href="../css/set2.css">
 </head>

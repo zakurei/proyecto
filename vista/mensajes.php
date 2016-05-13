@@ -112,6 +112,7 @@
 
 				<!-- Sacar lista de mensajes -->
 			<div class="mdl-card mensaje mdl-cell mdl-cell--12-col">
+			<div class="fondoTexto">
 				<div class="mdl-card__title mdl-color-text--grey-50 texto">
 					<blockquote>
 						<a href="local.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -119,6 +120,7 @@
 						  nascetur ridiculus mus. Donec qu</a>
 					</blockquote>
 				</div>
+			</div>	
 				<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
 					<div>
 						<img src="../images/usuarioAnonimo.jpg" class="avatarMsg">
@@ -132,6 +134,7 @@
 				</div>
 			</div>
 			<div class="mdl-card mensaje mdl-cell mdl-cell--12-col">
+			<div class="fondoTexto">
 				<div class="mdl-card__title mdl-color-text--grey-50 texto">
 					<blockquote>
 						<a href="local.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
@@ -139,6 +142,7 @@
 						  Donec qu</a>
 					</blockquote>
 				</div>
+			</div>	
 				<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
 					<div>
 						<img src="../images/usuarioAnonimo.jpg" class="avatarMsg">

@@ -8,7 +8,7 @@ include_once ("../controladores/conexion.php");
 		
 ?>
 
-<title>Jokers Club</title>
+<title>Seleccion Locales</title>
 
 </head>
 <body id="seleccionLocal">
@@ -18,8 +18,7 @@ include_once ("../controladores/conexion.php");
 			class="container container-local mdl-layout mdl-js-layout has-drawer is-upgraded">
       
 			<?php include_once ("menu.php")?>
-			
-	
+
 		<main class="mdl-layout__content">
 			<div class="grid mdl-grid">
 				<div class="mdl-grid mdl-shadow--4dp mdl-cell mdl-cell--12-col">
@@ -37,29 +36,23 @@ include_once ("../controladores/conexion.php");
 					$nombreId= str_replace(' ', '_', $nombre);  
 					
 					echo '
- 					<div class="mdl-card galeria" style=" border: 1px solid #ce318d; background:url('.''.'images/'.$imagen.''.')  center / cover;">
+ 					<div class="mdl-card galeria" style=" border: 1px solid #ce318d; background:url('.''.'images/'.$imagen.''.')  center / 130% 100%;">
  						<div class="mdl-card__title mdl-card--expand"></div>
  							<div class="mdl-card__actions">
-							<a id="localGaleria" class="mdl-button mdl-js-button mdl-js-ripple-effect botonGaleria" href="local.php?id='.$nombreId.'"><div class="material-icons">visibility</div></a> 							</div>
+								<a id="localGaleria" class="mdl-button mdl-js-button mdl-js-ripple-effect btnAviso" href="local.php?id='.$nombreId.'">
+									'.$nombre.'
+								</a>
+							</div>
  					</div>';
-					
-				}
-				
-				
-				
-
-							
+				}		
 				?>
-				
-				
-					
+
 				</div>
 			</div>
 		
 		<?php include_once ("footer.php")?>
 		
 		 </main>
-			<div class="mdl-layout__obfuscator"></div>
 		</div>
 	</div>
 	<script src="../js/material.min.js"></script>

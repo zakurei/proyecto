@@ -20,7 +20,7 @@
 					<div class="mdl-card__media mdl-color-text--grey-50">
 					
 					
-						<img id="fotoLocal" alt="" src="../images/dreams.jpg">
+						<img id="fotoLocal" alt="" src="images/dreams.jpg">
 							<h3><b id="tituloLocal">Jokers Club</b></h3>
 					</div>
 					
@@ -126,6 +126,6 @@
 		 </main>
 	</div>
 </div>
-	<script src="../js/material.min.js"></script>
+	<script src="js/material.min.js"></script>
 </body>
 </html>
