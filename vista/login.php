@@ -24,7 +24,7 @@
 				<div
 					class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 					<div class="mdl-card__media mdl-color-text--grey-50">
-					<img id="fotoLocal" alt="" src="../images/alex.jpg">
+					<img id="fotoLocal" alt="" src="images/alex.jpg">
 
 					</div>
 					<div class="mdl-color-text--grey-700 mdl-card__supporting-text ">
@@ -35,7 +35,7 @@
 								class="input__field input__field--efecto" type="text"
 								id="email"> <label class="input__label input__label--efecto"
 								for="email"> <span
-									class="input__label-content input__label-content--efecto">Email</span>
+									class="input__label-content input__label-content--efecto email">Email</span>
 							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
 						<path
@@ -53,7 +53,7 @@
 								class="input__field input__field--efecto" type="password"
 								id="password"> <label class="input__label input__label--efecto"
 								for="password"> <span
-									class="input__label-content input__label-content--efecto">Password</span>
+									class="input__label-content input__label-content--efecto password">Password</span>
 							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
 						<path

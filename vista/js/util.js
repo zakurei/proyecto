@@ -28,11 +28,9 @@ $(document).ready(function(){
 	
 	
 	
-	
 	/* Evitamos que el texto que se mueve de los inputs no vuelva a introducirse dentro de
 	los inputs al quitar el foco del input.*/
 	(function() {
-		// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 		if (!String.prototype.trim) {
 			(function() {
 				// Make sure we trim BOM and NBSP
@@ -44,12 +42,12 @@ $(document).ready(function(){
 		}
 
 		[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-			// in case the input is already filled..
+			// en el caso de que el input ya esté lleno..
 			if( inputEl.value.trim() !== '' ) {
 				classie.add( inputEl.parentNode, 'input--filled' );
 			}
 
-			// events:
+			// eventos:
 			inputEl.addEventListener( 'focus', onInputFocus );
 			inputEl.addEventListener( 'blur', onInputBlur );
 		} );

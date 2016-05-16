@@ -11,7 +11,7 @@ include_once ("head.php");
 
 <title>Registro</title>
 
-<link rel="stylesheet" href="../css/set2.css">
+<link rel="stylesheet" href="css/set2.css">
 </head>
 <body id="registro">
 
@@ -27,7 +27,7 @@ include_once ("head.php");
 				<div
 					class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 					<div class="mdl-card__media mdl-color-text--grey-50">
-					<img id="fotoLocal" alt="" src="../images/cocobongos.jpg">
+					<img id="fotoLocal" alt="" src="images/cocobongos.jpg">
 					</div>
 					<div class="mdl-color-text--grey-700 mdl-card__supporting-text ">
 

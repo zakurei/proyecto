@@ -55,6 +55,5 @@ include_once ("../controladores/conexion.php");
 		 </main>
 		</div>
 	</div>
-	<script src="../js/material.min.js"></script>
 </body>
 </html>

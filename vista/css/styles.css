@@ -313,6 +313,9 @@ body .container {
 .texto blockquote a{
 	opacity:inherit;
 } 
+blockquote{
+	margin: 0 auto;
+}
 .fondoTexto{
 	height: 250px;
     background-size: 100% 100%;
@@ -498,3 +501,21 @@ body .container {
 	color:#CCEA06;
 }
 
+#mensajes .mensaje h3, #mensajes .mensaje .btnAviso{
+	margin:0 auto;
+	font-size:30px;
+	color:#CCEA06;
+	border-radius:15px;
+}
+#mensajes .container .mdl-card__supporting-text{
+width: 85%; 
+}
+.autor{
+ width:15%;
+}
+#mensajes .mdl-list__item--two-line .mdl-list__item-primary-content, #mensajes .mdl-list__item--two-line {
+	height: auto;
+}
+#mensajes .mdl-list__item--two-line .mdl-list__item-primary-content .mdl-list__item-sub-title{
+	margin-left:20%;
+}

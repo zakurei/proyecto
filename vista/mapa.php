@@ -21,7 +21,7 @@
 <?php include_once ("head.php")?>
 
 <script src="http://maps.googleapis.com/maps/api/js"></script>
-<script src="../js/mapa.js"></script>
+<script src="js/mapa.js"></script>
 
 <title>Mapa</title>
 

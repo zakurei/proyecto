@@ -3,7 +3,7 @@ $avatar = $_SESSION['usuario']['Avatar'];
 $nombre = $_SESSION['usuario']['Nombre'];
 
 
-	$imagen = '<img class="avatarMsg" src="../images/'.$avatar.'">';
+	$imagen = '<img class="avatarMsg" src="../images/usuarios/'.$avatar.'">';
 
 if ($_SESSION['usuario']['Tipo'] == "2"){
 	$editar = '<a id="editar" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="editarAdmin.php"><div class="material-icons">mode_edit</div></a>
