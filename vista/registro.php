@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 
-<?php 
+<?php
 include_once ("head.php");
 ?>
 <script src="js/util.js"></script>
@@ -27,15 +27,16 @@ include_once ("head.php");
 				<div
 					class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 					<div class="mdl-card__media mdl-color-text--grey-50">
-					<img id="fotoLocal" alt="" src="images/cocobongos.jpg">
+						<img id="fotoLocal" alt="" src="images/cocobongos.jpg">
 					</div>
 					<div class="mdl-color-text--grey-700 mdl-card__supporting-text ">
 
 						<div
 							class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--6-col ">
 							<span class="input input--efecto"> <input
-								class="input__field input__field--efecto" type="text" id="usuario">
-								<label class="input__label input__label--efecto" for="usuario"> <span
+								class="input__field input__field--efecto" type="text"
+								id="usuario"> <label class="input__label input__label--efecto"
+								for="usuario"> <span
 									class="input__label-content input__label-content--efecto usuario">Usuario</span>
 							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -51,9 +52,8 @@ include_once ("head.php");
 							class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--6-col">
 
 							<span class="input input--efecto"> <input
-								class="input__field input__field--efecto" type="text"
-								id="email"> <label class="input__label input__label--efecto"
-								for="email"> <span
+								class="input__field input__field--efecto" type="text" id="email">
+								<label class="input__label input__label--efecto" for="email"> <span
 									class="input__label-content input__label-content--efecto email">Email</span>
 							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -69,8 +69,9 @@ include_once ("head.php");
 						<div
 							class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--6-col ">
 							<span class="input input--efecto"> <input
-								class="input__field input__field--efecto" type="password" id="password">
-								<label class="input__label input__label--efecto" for="password"> <span
+								class="input__field input__field--efecto" type="password"
+								id="password"> <label class="input__label input__label--efecto"
+								for="password"> <span
 									class="input__label-content input__label-content--efecto password">Password</span>
 							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -81,13 +82,14 @@ include_once ("head.php");
 					</svg>
 							</span>
 						</div>
-						
+
 					</div>
-					<div class="mdl-card__actions mdl-card--border" style="text-align:center;">
-							<button type ="submit" id="registrar" style="color:white;"
-								class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect btnAviso">Log
-								in</button>
-						</div>
+					<div class="mdl-card__actions mdl-card--border"
+						style="text-align: center;">
+						<button type="submit" id="registrar" style="color: white;"
+							class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect btnAviso">Log
+							in</button>
+					</div>
 				</div>
 			</div>
 			

@@ -11,20 +11,16 @@
 <link rel="stylesheet" href="css/set2.css">
 </head>
 <body id="login">
-
 	<div class="fondo">
 		<div
 			class="container container-local mdl-layout mdl-js-layout has-drawer is-upgraded">
-      
 			<?php include_once ("menu.php")?>
-			
-	
 		<main class="mdl-layout__content">
 			<div class="grid mdl-grid">
 				<div
 					class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 					<div class="mdl-card__media mdl-color-text--grey-50">
-					<img id="fotoLocal" alt="" src="images/alex.jpg">
+						<img id="fotoLocal" alt="" src="images/galeriaLocales/alex.jpg">
 
 					</div>
 					<div class="mdl-color-text--grey-700 mdl-card__supporting-text ">
@@ -32,9 +28,8 @@
 						<div
 							class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--6-col ">
 							<span class="input input--efecto"> <input
-								class="input__field input__field--efecto" type="text"
-								id="email"> <label class="input__label input__label--efecto"
-								for="email"> <span
+								class="input__field input__field--efecto" type="text" id="email">
+								<label class="input__label input__label--efecto" for="email"> <span
 									class="input__label-content input__label-content--efecto email">Email</span>
 							</label> <svg class="graphic graphic--efecto" width="300%"
 									height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -65,23 +60,19 @@
 						</div>
 
 					</div>
-					
-						<div class="mdl-card__actions mdl-card--border" style="text-align:center;">
-							<button style="color:white;"
-								class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect btnAviso">Log
-								in</button>
-						</div>
-		
+
+					<div class="mdl-card__actions mdl-card--border"
+						style="text-align: center;">
+						<button style="color: white;"
+							class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect btnAviso">Log
+							in</button>
+					</div>
+
 				</div>
 			</div>
-			
-			
-			<?php include_once ("footer.php")?>
-				
-				
+			<?php include_once ("footer.php")?>	
 			</main>
 		</div>
 	</div>
-		
 </body>
 </html>

@@ -2,10 +2,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-<?php 
+<?php
 include_once ("head.php");
-include_once ("../controladores/conexion.php");
-		
+include_once ("../modelo/conexion.php");
+include_once ("../controladores/seleccionLocal.php");
+
 ?>
 
 <title>Seleccion Locales</title>
@@ -23,29 +24,7 @@ include_once ("../controladores/conexion.php");
 			<div class="grid mdl-grid">
 				<div class="mdl-grid mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 				
-				<?php 				
-				$conexion = new conexion();
-				$conn = $conexion->conectar();
-				
-				$sql = "SELECT * FROM locales";
-				$cons = $conexion->ejecutar_consulta($sql);
-				
-				while ($row = mysqli_fetch_object($cons)){
-					$imagen = $row->imagen;
-					$nombre = $row->nombre;
-					$nombreId= str_replace(' ', '_', $nombre);  
-					
-					echo '
- 					<div class="mdl-card galeria" style=" border: 1px solid #ce318d; background:url('.''.'images/'.$imagen.''.')  center / 130% 100%;">
- 						<div class="mdl-card__title mdl-card--expand"></div>
- 							<div class="mdl-card__actions">
-								<a id="localGaleria" class="mdl-button mdl-js-button mdl-js-ripple-effect btnAviso" href="local.php?id='.$nombreId.'">
-									'.$nombre.'
-								</a>
-							</div>
- 					</div>';
-				}		
-				?>
+				<?php seleccionLocal();?>
 
 				</div>
 			</div>

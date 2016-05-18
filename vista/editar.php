@@ -18,7 +18,7 @@ error_reporting();
         header("Location: registro2.0.php");
     }
 
-    include_once "../controladores/conexion.php";
+    include_once "../modelo/conexion.php";
     $conexion = new conexion();
     $conn = $conexion->conectar();
 

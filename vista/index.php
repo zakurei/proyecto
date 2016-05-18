@@ -2,173 +2,108 @@
 <!doctype html>
 <html lang="en">
 <head>
-
-<?php include_once ("head.php")  ?>
-
+<?php include_once ("head.php")?>
 <title>Home</title>
-
 </head>
-<body id="index">
- 
-      
-<div class="fondo">
-	<div class="container container-local mdl-layout mdl-js-layout has-drawer is-upgraded">
-      
-			<?php include_once ("menu.php")  ?>
-			<main class="mdl-layout__content">
-		<div class="grid mdl-grid">
+<body id="home">
+	<div
+		class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+		<?php include_once ("menu.php")?>	
+  <main class="mdl-layout__content">
 
-			<!-- Tops -->
-			<div class="mdl-card tops mdl-cell mdl-cell--12-col">
-				<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-					  <div class="mdl-tabs__tab-bar headerTops">
-					      <a href="#starks-panel" class="mdl-tabs__tab is-active">Locales más comentados</a>
-					      <a href="#lannisters-panel" class="mdl-tabs__tab">Usuarios más activos</a>
-					      <a href="#targaryens-panel" class="mdl-tabs__tab">Locales más votados</a>
-					  </div>
+		<div class="mdl-layout__tab-panel is-active">
+			<div class="topHome">
+				<div class="topHomeTexto mdl-typography--text-center">
+					<img src="images/logo.png" class="logo" style="width:350px; height:350px;">
+					<a
+						class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent"
+						href="#intro"> <i class="material-icons">keyboard_arrow_down</i>
+					</a>
+				</div>
+			</div>
+			<div id="intro" class="mdl-grid centroHome">
+				<div class="centroHomeIntro mdl-cell mdl-cell--12-col">
+					<p class="mdl-typography--headline">En esta web tienes a tu
+						disposición información actual sobre los mejores locales de
+						Magaluf:</p>
+				</div>
+				<div
+					class="centroHomeIntro mdl-cell mdl-cell--5-col mdl-cell--1-col-tablet mdl-cell--hide-phone">
+					<div class="puntosCentroHome">
+						<div class="punto"></div>
+						<div class="punto"></div>
+						<div class="punto"></div>
+						<div class="punto"></div>
+					</div>
+				</div>
+				<div
+					class="centroHomeIntro mdl-cell mdl-cell--7-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+					<div class="linksCentroHome">
+						<div class="link">
+							<a href="seleccionLocal.php">Galería de locales</a>
+						</div>
+						<div class="link">
+							<a href="mensajes.php">Comentarios de los usuarios</a>
+						</div>
+						<div class="link">
+							<a href="mapa.php">Mapa</a>
+						</div>
+						<div class="link">
+							<a href="contacto.php">Contacto</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="centroHomeIntro mdl-cell mdl-cell--12-col">
+
+					<p class="centroP">
+						<img src="images/maga2016.jpg" alt="maga2016"
+							class="imgCentroHome float-left"> Cualquiera que sea su edad o el
+						motivo de sus vacaciones, la variedad de experiencias para
+						disfrutar en Magaluf es ilimitada. Si busca tranquilidad o
+						diversión, si quiere disfrutar de nuestra bella costa, salpicada
+						con playas y pequeñas calas, explorar los atractivos paisajes de
+						interior, deleitarse con nuestros excelentes restaurantes o
+						degustar los vinos locales, ya sea por negocios, vacaciones o para
+						realizar actividades, encontrará todo esto y más! Aquí todo el
+						mundo es bienvenido!
+					</p>
+					<p>Situado en el suroeste de Mallorca, a solo 20 minutos del
+						aeropuerto, Magaluf ofrece una excelente infraestructura hotelera,
+						y abundantes servicios en todas sus zonas de playa. Añada a la
+						receta 300 días de sol al año y temperaturas medias de 27º en
+						verano y 14º en invierno para que su estancia sea ¡simplemente
+						sensacional!</p>
+				</div>
+			</div>
+
+			<div class="mdl-grid mdl-grid--no-spacing botHome">
+				<div
+					class="mdl-cell mdl-cell--12-col mdl-typography--text-center frases">
+					<p>
 					
-					  <div class="mdl-tabs__panel is-active" id="starks-panel">
-							<ul class="mdl-list">
-								<li class="mdl-list__item mdl-list__item--two-line"><span
-									class="mdl-list__item-primary-content"> <i
-										class="material-icons mdl-list__item-avatar">person</i> <span>Bryan
-											Cranston</span> <span class="mdl-list__item-sub-title">62
-											Episodes</span>
-								</span> <span class="mdl-list__item-secondary-content"> <i
-											class="material-icons">message</i>
-								</span></li>
-								<li class="mdl-list__item mdl-list__item--two-line"><span
-									class="mdl-list__item-primary-content"> <i
-										class="material-icons mdl-list__item-avatar">person</i> <span>Aaron
-											Paul</span> <span class="mdl-list__item-sub-title">62 Episodes</span>
-								</span> <span class="mdl-list__item-secondary-content"> <i
-											class="material-icons">message</i>
-								</span></li>
-								<li class="mdl-list__item mdl-list__item--two-line"><span
-									class="mdl-list__item-primary-content"> <i
-										class="material-icons mdl-list__item-avatar">person</i> <span>Bob
-											Odenkirk</span> <span class="mdl-list__item-sub-title">62
-											Episodes</span>
-								</span> <span class="mdl-list__item-secondary-content"> <i
-											class="material-icons">message</i>
-								</span></li>
-							</ul>
-					  </div>
-					  
-					  
-					  <div class="mdl-tabs__panel" id="lannisters-panel">
-						     <ul class="mdl-list">
-								<li class="mdl-list__item mdl-list__item--two-line"><span
-									class="mdl-list__item-primary-content"> <i
-										class="material-icons mdl-list__item-avatar">person</i> <span>Bryan
-											Cranston</span> <span class="mdl-list__item-sub-title">62
-											Episodes</span>
-								</span> <span class="mdl-list__item-secondary-content"> <i
-											class="material-icons">star</i>
-								</span></li>
-								<li class="mdl-list__item mdl-list__item--two-line"><span
-									class="mdl-list__item-primary-content"> <i
-										class="material-icons mdl-list__item-avatar">person</i> <span>Aaron
-											Paul</span> <span class="mdl-list__item-sub-title">62 Episodes</span>
-								</span> <span class="mdl-list__item-secondary-content"> <i
-											class="material-icons">star</i>
-								</span></li>
-								<li class="mdl-list__item mdl-list__item--two-line"><span
-									class="mdl-list__item-primary-content"> <i
-										class="material-icons mdl-list__item-avatar">person</i> <span>Bob
-											Odenkirk</span> <span class="mdl-list__item-sub-title">62
-											Episodes</span>
-								</span> <span class="mdl-list__item-secondary-content"> <i
-											class="material-icons">star</i>
-								</span></li>
-							</ul>
-					  </div>
-					  
-					  
-					  <div class="mdl-tabs__panel" id="targaryens-panel">
-						   <ul class="mdl-list">
-								<li class="mdl-list__item mdl-list__item--two-line"><span
-									class="mdl-list__item-primary-content"> <i
-										class="material-icons mdl-list__item-avatar">person</i> <span>Bryan
-											Cranston</span> <span class="mdl-list__item-sub-title">62
-											Episodes</span>
-								</span> <span class="mdl-list__item-secondary-content"> <i
-											class="material-icons">favorite</i>
-								</span></li>
-								<li class="mdl-list__item mdl-list__item--two-line"><span
-									class="mdl-list__item-primary-content"> <i
-										class="material-icons mdl-list__item-avatar">person</i> <span>Aaron
-											Paul</span> <span class="mdl-list__item-sub-title">62 Episodes</span>
-								</span> <span class="mdl-list__item-secondary-content"> <i
-											class="material-icons">favorite</i>
-								</span></li>
-								<li class="mdl-list__item mdl-list__item--two-line"><span
-									class="mdl-list__item-primary-content"> <i
-										class="material-icons mdl-list__item-avatar">person</i> <span>Bob
-											Odenkirk</span> <span class="mdl-list__item-sub-title">62
-											Episodes</span>
-								</span> <span class="mdl-list__item-secondary-content"> <i
-											class="material-icons">favorite</i>
-								</span></li>
-							</ul>
-					  </div>
-				</div>
-			</div>
+					
+					<blockquote>No Armani, no punani.</blockquote>
+					</p>
+					<p>
+					
+					
+					<blockquote>Hello chicken nugget.</blockquote>
+					</p>
+					<p>
+					
+					
+					<blockquote>What happens in Magaluf stays in Magaluf.</blockquote>
+					</p>
 
 
-				<!-- Sacar lista de mensajes -->
-			<div class="mdl-card mensaje mdl-cell mdl-cell--12-col">
-			<div class="fondoTexto">
-				<div class="mdl-card__title mdl-color-text--grey-50 texto">
-					<blockquote>
-						<a href="local.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						 Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-						  nascetur ridiculus mus. Donec qu</a>
-					</blockquote>
-				</div>
-			</div>	
-				<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-					<div>
-						<img src="../images/usuarioAnonimo.jpg" class="avatarMsg">
-					</div>
-					<div class="autor">
-						<strong>John Dufry</strong> <span>2 days ago</span>
-					</div>
-					<h3 style="margin-left:25%;">
-						<a href="#">Stereo Bar</a>
-					</h3>
-				</div>
-			</div>
-			<div class="mdl-card mensaje mdl-cell mdl-cell--12-col">
-			<div class="fondoTexto">
-				<div class="mdl-card__title mdl-color-text--grey-50 texto">
-					<blockquote>
-						<a href="local.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-						 Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						  Donec qu</a>
-					</blockquote>
-				</div>
-			</div>	
-				<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-					<div>
-						<img src="../images/usuarioAnonimo.jpg" class="avatarMsg">
-					</div>
-					<div class="autor">
-						<strong>John Dufry</strong> <span>2 days ago</span>
-					</div>
-					<h3 style="margin-left:25%;">
-						<a href="#">Mambos</a>
-					</h3>
 				</div>
 			</div>
 		</div>
-	
-		
-		
-		<?php include_once ("footer.php")?>
-		
-		 </main>
+      <?php include_once ("footer.php")?>
+  </main>
 	</div>
-</div>
 </body>
 </html>
+

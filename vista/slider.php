@@ -1,6 +1,4 @@
-  
-    <!-- Slider gratuito sacado de: http://www.jssor.com/demos/image-slider.slider -->
-
+   <!-- Slider sacado de: http://www.jssor.com/demos/image-slider.slider -->
     <script>
         jQuery(document).ready(function ($) {
             
@@ -38,8 +36,6 @@
             
             var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
             
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizing
             function ScaleSlider() {
                 var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
                 if (refSize) {
@@ -54,7 +50,6 @@
             $(window).bind("load", ScaleSlider);
             $(window).bind("resize", ScaleSlider);
             $(window).bind("orientationchange", ScaleSlider);
-            //responsive code end
         });
     </script>
     <div id="jssor_1" style="border-width:1px; border-style:solid; position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
@@ -63,7 +58,7 @@
             
             <?php for ($i=0; $i<=3; $i++){
             	echo '<div data-p="112.50" style="display: none;">
-            	<img data-u="image" src="images/locales/'. $_GET["id"]. '/'.$i.'.jpg" />
+            	<img data-u="image" src="images/locales/'.$_GET["name"].'/'.$i.'.jpg" />
             	</div>';
             }
             ?>

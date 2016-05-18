@@ -73,9 +73,15 @@
 						  	
 						 ["<div id='marker'><h3 class='markerh3'><i>Chaplins</i></h3>" + 
 /*Chaplins*/	  		  "<b>HAVE FUN!!!!!</b><br/>"  
-						  	, 39.509771, 2.537148, 17] 	
+						  	, 39.509771, 2.537148, 17],
+						  	
+						 ["<div id='marker'><h3 class='markerh3'><i>Morgans</i></h3>" + 
+/*Morgans*/	  		  "<b>HAVE FUN!!!!!</b><br/>"  
+						  	, 39.509996, 2.532634, 17] 	 	
 			                       
 		               ];
+		
+		
 		
 		
 		var map = new google.maps.Map(document.getElementById('map'), {

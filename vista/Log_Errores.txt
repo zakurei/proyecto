@@ -20,3 +20,15 @@
 [16/05/2016 13:56:47] Unknown column 'u.imagen' in 'field list'
 [16/05/2016 13:56:47] Unknown column 'u.imagen' in 'field list'
 [16/05/2016 13:57:52] Unknown column 'u.imagen' in 'field list'
+[17/05/2016 08:00:27] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'COUNT(c.id) AS cantidadComents
+						FROM
+						 locales AS l
+						 INNER JO' at line 2
+[18/05/2016 13:40:01] Unknown column 'coco_bongos' in 'where clause'
+[18/05/2016 13:40:01] Unknown column 'coco_bongos' in 'where clause'
+[18/05/2016 13:41:33] Unknown column 'coco_bongos' in 'where clause'
+[18/05/2016 13:41:33] Unknown column 'coco_bongos' in 'where clause'
+[18/05/2016 13:41:44] Unknown column 'coco_bongos' in 'where clause'
+[18/05/2016 13:41:44] Unknown column 'coco_bongos' in 'where clause'
+[18/05/2016 13:44:27] Unknown column 'coco_bongos' in 'where clause'
+[18/05/2016 13:44:27] Unknown column 'coco_bongos' in 'where clause'
