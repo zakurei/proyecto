@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,11 +14,7 @@ include_once ("../controladores/mensajes.php");
 <body id="mensajes">
 	<div class="fondo">
 		<div class="container mdl-layout mdl-js-layout has-drawer is-upgraded">
-	<?php
-	$conexion = new conexion ();
-	$conn = $conexion->conectar ();
-	
-	include_once ("menu.php")?>
+	<?php include_once ("menu.php")?>
 	
 		<main class="mdl-layout__content">
 			<div class="grid mdl-grid">

@@ -6,16 +6,16 @@
 <title>Home</title>
 </head>
 <body id="home">
-	<div
-		class="mdl-layout mdl-js-layout mdl-layout--fixed-header
-            mdl-layout--fixed-tabs">
+	<div class="container mdl-layout mdl-js-layout has-drawer is-upgraded">
+            
 		<?php include_once ("menu.php")?>	
+		
   <main class="mdl-layout__content">
 
 		<div class="mdl-layout__tab-panel is-active">
 			<div class="topHome">
-				<div class="topHomeTexto mdl-typography--text-center">
-					<img src="images/logo.png" class="logo" style="width:350px; height:350px;">
+				<div class="topHomeTexto mdl-typography--text-center"><br/>
+					<img src="images/logoMenu.png" class="logo" style="width:500px; height:100px;"><br/>
 					<a
 						class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent"
 						href="#intro"> <i class="material-icons">keyboard_arrow_down</i>

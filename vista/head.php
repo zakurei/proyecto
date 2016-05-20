@@ -2,6 +2,7 @@
 ?>
 
 <!-- La mayor parte de metas y link están agregados para usar material design lite -->
+<link rel="shortcut icon" href="images/logo.png" type="image/png"/>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"

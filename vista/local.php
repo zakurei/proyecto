@@ -27,7 +27,7 @@ include_once ("../controladores/local.php");
 					$nombreImagen = str_replace('_', '', $nombre);
 					$titulo= str_replace('_', ' ', $nombre);
 					echo '
-						<img id="fotoLocal" alt="" src="images/galeriaLocales/'.$nombreImagen.'.jpg">
+						<img id="fotoLocal" alt="local" src="images/galeriaLocales/'.$nombreImagen.'.jpg">
 						<h3><b id="tituloLocal">'.$titulo.'</b></h3>
 						';
 					?>
@@ -64,7 +64,7 @@ include_once ("../controladores/local.php");
 					<?php include_once ("slider.php")  ?>
 					<br/>
 					<div class="mdl-color-text--primary-contrast mdl-card__supporting-text containerComents">
-						<form method="post" action="local.php?id=jokers" class="mensaje">
+						<?php echo '<form method="post" action="local.php?name='.$_GET['name'].'&id='.$_GET['id'].'" class="mensaje">'?>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 								<textarea rows=1 class="mdl-textfield__input" id="comentario"></textarea>
 								<label for="comentario" class="mdl-textfield__label">Escribe tu comentario</label>

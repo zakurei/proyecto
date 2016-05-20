@@ -4,17 +4,21 @@
 <?php
 //Usuarios registrados/admin.
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true){
-	include_once ('../controladores/menu.php');
+ 	include_once ('../controladores/menu.php');
 	include_once ("../controladores/breadCrumbs.php");
 	
 	echo '
 		<div class="mdl-card__supporting-text usuarioMenu mdl-color-text--grey-600">
 					<div>'.$imagen.'</div>
-					<div class="autor">
-						<strong>'.$nombre.'</strong>
-					</div>
+						<div class="autor">
+							<strong>'.$nombre.'</strong>
+						</div>
+					
+					
 				</div>
-				<span class="mdl-layout-title">MagaGuide </span>'?>
+				<span class="mdl-layout-title">
+					<img src="images/logoMenu.png" class="logo" style="width:auto; height:45px;">
+				</span>'?>
 						
 		
 			<div class="mdl-layout-spacer" style="text-align:center;"><span id="breadCrumb" class="mdl-layout-title"></span></div>
@@ -40,7 +44,9 @@ if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true){
 } else {
 	
 	echo '
-			<span class="mdl-layout-title">MagaGuide</span>'?>		
+			<span class="mdl-layout-title">
+					<img src="images/logoMenu.png" class="logo" style="width:auto; height:45px;">
+					</span>'?>		
 		
 			<div class="mdl-layout-spacer" style="text-align:center;"><span id="breadCrumb" class="mdl-layout-title"></span> </div>	 
 		

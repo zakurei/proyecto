@@ -32,3 +32,11 @@
 [18/05/2016 13:41:44] Unknown column 'coco_bongos' in 'where clause'
 [18/05/2016 13:44:27] Unknown column 'coco_bongos' in 'where clause'
 [18/05/2016 13:44:27] Unknown column 'coco_bongos' in 'where clause'
+[19/05/2016 10:40:08] Unknown column 'magaguide' in 'where clause'
+[19/05/2016 13:39:26] Unknown column 'stereo' in 'where clause'
+[19/05/2016 13:39:26] Unknown column 'stereo' in 'where clause'
+[19/05/2016 15:06:21] Table 'guia.usuario' doesn't exist
+[19/05/2016 15:07:28] Table 'guia.usuario' doesn't exist
+[20/05/2016 06:42:35] Table 'guia.usuario' doesn't exist
+[20/05/2016 12:50:01] Unknown column 'jokers' in 'where clause'
+[20/05/2016 12:50:01] Unknown column 'jokers' in 'where clause'
