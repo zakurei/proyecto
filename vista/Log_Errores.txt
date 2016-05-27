@@ -40,3 +40,12 @@
 [20/05/2016 06:42:35] Table 'guia.usuario' doesn't exist
 [20/05/2016 12:50:01] Unknown column 'jokers' in 'where clause'
 [20/05/2016 12:50:01] Unknown column 'jokers' in 'where clause'
+[23/05/2016 07:04:35] Unknown column 'jokers' in 'where clause'
+[23/05/2016 07:04:35] Unknown column 'jokers' in 'where clause'
+[23/05/2016 07:07:10] Unknown column 'city_lights' in 'where clause'
+[23/05/2016 07:07:10] Unknown column 'city_lights' in 'where clause'
+[23/05/2016 07:09:39] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as id_local = l.id
+							ORDER BY RAND()
+							LIMIT 10' at line 4
+[23/05/2016 07:26:05] Unknown column 'coco_bongos' in 'where clause'
+[23/05/2016 07:26:05] Unknown column 'coco_bongos' in 'where clause'

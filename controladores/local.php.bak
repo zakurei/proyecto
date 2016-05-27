@@ -49,7 +49,7 @@ function comentarios() {
 	
 	$sql = "SELECT u.nombre as us_nombre, u.avatar, c.comentario
 					FROM comentarios c INNER JOIN usuarios u ON c.id_usuarios = u.id 
-					WHERE c.id_locales = ".$_GET['id'];
+					WHERE c.id_locales = ".$_GET['id']." LIMIT 5;";
 	
 	$cons = $conexion->ejecutar_consulta ( $sql );
 	
@@ -95,7 +95,6 @@ function enviarComentario(){
 	}					
 							echo '</form>';
 							if (isset($_POST['enviar'])){
-								echo $sql;
 								echo $semaforo;
 							}
 }

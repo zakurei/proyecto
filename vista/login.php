@@ -1,17 +1,18 @@
 <?php
 session_start ();
-if (isset ( $_SESSION ['logueado'] ) && $_SESSION ['logueado'] == true) {
+include_once ("../modelo/conexion.php");
+include_once ("../controladores/login.php");
+login();
+if (isset ( $_SESSION ['logueado'] ) && $_SESSION ['logueado']) {
 	header ( "Location: index.php" );
 }
 ?>
 <!doctype html>
-
 <html lang="en">
 <head>
 
 <?php
 include_once ("head.php");
-include_once ("../modelo/conexion.php");
 ?>
 <script src="js/util.js"></script>
 
@@ -31,42 +32,11 @@ include_once ("../modelo/conexion.php");
 						<img id="fotoPortada" alt="" src="images/portada.png">
 
 					</div>
-					<form method="post" action="#" class="registro">
-						<span id="usuarioError"><li></li></span> <span id="passwordError"><li></li></span>
-					 <?php
-						if (isset ( $_POST ['login'] )) {
-							$conexion = new conexion ();
-							$conn = $conexion->conectar ();
-							
-							$nombre = $_POST ['usuario'];
-							$pass = $_POST ['password'];
-							
-							$sql = "SELECT * FROM usuarios where nombre ='" . $nombre . "'";
-							$cons = $conexion->ejecutar_consulta ($sql);
-							
-							if (mysqli_num_rows($cons) == 0) {
-								echo "<b>El usuario " . $nombre . " no existe</b>";
-							} else {
-								
-								$row = $cons->fetch_assoc ();
-								$passEncriptadaLogin = md5 ( $pass );
-								$passEncriptadaBD = $row ['password'];
-								
-								if ($passEncriptadaLogin != $passEncriptadaBD) {
-									echo "<b>Contraseña incorrecta.</b>";
-								} else {
-									$_SESSION ['logueado'] = true;
-									$_SESSION ['usuario'] ['nombre'] = $row ['nombre'];
-									$_SESSION ['usuario'] ['password'] = $row ['password'];
-									$_SESSION ['usuario'] ['email'] = $row ['email'];
-									$_SESSION ['usuario'] ['avatar'] = $row ['avatar'];
-									$_SESSION ['usuario'] ['tipo'] = $row ['tipo'];
-									
-									header ( "Location: index.php" );
-								}
-							}
-						}
-						?>
+					<form method="post" class="login">
+						<div class="errores">
+							<span id="usuarioError"></span>
+						    <span id="passwordError"></span>
+					 	</div>
 					<div class="mdl-color-text--grey-700 mdl-card__supporting-text ">
 
 							<div
@@ -78,10 +48,8 @@ include_once ("../modelo/conexion.php");
 										class="input__label-content input__label-content--efecto usuario">Usuario</span>
 								</label> <svg class="graphic graphic--efecto" width="300%"
 										height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-						<path
-											d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-						<path
-											d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+						<path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
 					</svg>
 								</span>
 							</div>
@@ -108,8 +76,8 @@ include_once ("../modelo/conexion.php");
 
 						<div class="mdl-card__actions mdl-card--border"
 							style="text-align: center;">
-							<button type="submit" id="login" name="login"
-								class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect btnAviso login">Login</button>
+							<input type="submit" id="login" name="login"
+								class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect btnAviso login"></input>
 						</div>
 					</form>
 				</div>

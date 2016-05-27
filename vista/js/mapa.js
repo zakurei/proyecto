@@ -8,7 +8,7 @@
 		var locations = [
 		                 ["<div id='marker'><h3 class='markerh3'><i>Jokers Club</i></h3>" + 
 /*Jokers Club*/			  "<b>HAVE FUN!!!!!</b><br/>"  
-						  	, 39.50727, 2.531797, 1],
+						  	, 39.507048, 2.531761, 1],
 						  
 		                 ["<div id='marker'><h3 class='markerh3'><i>Stereo Bar</i></h3>" + 
 /*Stereo Bar*/			  "<b>HAVE FUN!!!!!</b><br/>" 
@@ -80,10 +80,7 @@
 						  	, 39.509996, 2.532634, 17] 	 	
 			                       
 		               ];
-		
-		
-		
-		
+
 		var map = new google.maps.Map(document.getElementById('map'), {
 			center : new google.maps.LatLng(39.507108, 2.531945),
 			zoom : 16,
@@ -95,7 +92,8 @@
 
 		
 		var icon = {
-			    scaledSize: new google.maps.Size(31, 50), 
+				url: "../images/marker.png",
+			    scaledSize: new google.maps.Size(30, 50), 
 			    origin: null, 
 			    anchor: null,
 			};
@@ -107,7 +105,6 @@
 		        map: map,
 		        animation: google.maps.Animation.DROP,
 		      });
-		      marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
 		      
 		      google.maps.event.addListener(marker, 'click', (function(marker, i) {
 		        return function() {

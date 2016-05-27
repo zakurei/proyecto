@@ -3,16 +3,17 @@ function mensajes(){
 	$conexion = new conexion ();
 	$conn = $conexion->conectar ();
 	
-	$sql = "SELECT l.nombre as loc_nombre, u.nombre as us_nombre, u.avatar, c.comentario
+	//Mostramos 10 comentarios aleatorios que se hayan hecho a los locales.
+	$sql = "SELECT l.nombre as loc_nombre, u.nombre as us_nombre, u.avatar, c.id_locales as id_local, c.comentario
 							FROM usuarios u
 							JOIN comentarios c ON u.id = c.id_usuarios
 							JOIN locales l ON c.id_locales = l.id
 							ORDER BY RAND()
 							LIMIT 10";
-	
 	$cons = $conexion->ejecutar_consulta ( $sql );
 	
 	while ( $row = mysqli_fetch_object ( $cons ) ) {
+		$idLocal = $row->id_local;
 		$nombreUsuario = $row->us_nombre;
 		$imagenUsuario = $row->avatar;
 		$comentario = $row->comentario;
@@ -24,7 +25,7 @@ function mensajes(){
 			<div class="fondoTexto">
 				<div class="mdl-card__title mdl-color-text--grey-50 texto">
 					<blockquote>
-						<a href="local.php?id=' . $nombreLink . '">' . $comentario . '</a>
+						<a  href="local.php?name='.$nombreLink.'&id='.$idLocal.'">' . $comentario . '</a>
 					</blockquote>
 				</div>
 			</div>
@@ -35,19 +36,12 @@ function mensajes(){
 					<div class="autor">
 						<strong>' . $nombreUsuario . '</strong> <span>2 days ago</span>
 					</div>
-												<h3>
-								<a id="localGaleria" class=" mdl-js-ripple-effect" href="local.php?id=' . $nombreLink . '">
-									' . $nombre . '
-								</a>
-							</h3>
-	
+					<h3>
+						<a id="localGaleria" class=" mdl-js-ripple-effect"
+								href="local.php?name='.$nombreLink.'&id='.$idLocal.'">' . $nombre . '</a>
+					</h3>
 				</div>
-			</div>
-					';
+			</div>';
 	}
-	
-	
-	
-	
 }
 ?>

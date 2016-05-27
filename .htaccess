@@ -1,0 +1,4 @@
+#RewriteEngine On
+
+#RewriteRule ^$ vista/index.php [L]
+#RewriteRule ^guia.nikwit.com/vista/index.php$ http://guia.nikwit.com/index [R=301,L]

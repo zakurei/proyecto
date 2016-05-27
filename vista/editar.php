@@ -1,149 +1,76 @@
-<?php
-session_start();
-error_reporting();
+<?php session_start();
+include_once ("../modelo/conexion.php");
+include_once ("../controladores/editar.php");
+if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] == false) {
+	header("Location: index.php");
+}
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Editar</title>
-    <link rel="stylesheet" type="text/css" href="estilo.css">
+<?php include_once ("head.php");?>
+<title>Editar Perfil</title>
+<script src="js/utilEditar.js"></script>
+<link rel="stylesheet" href="css/set2.css">
 
 </head>
-<body>
-<div>
-    <?php
+<body id="editar">
 
-    if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] != true) {
-        header("Location: registro2.0.php");
-    }
-
-    include_once "../modelo/conexion.php";
-    $conexion = new conexion();
-    $conn = $conexion->conectar();
-
-    if (isset($_POST['aceptar'])) {
-        $archivo_origen = $_FILES['SelectImagen']['tmp_name'];
-        $archivo_final = $_FILES['SelectImagen']['name'];
-
-        $nombre = $_POST['nombre'];
-        $email = $_POST['email'];
-        $firma = $_POST['firma'];
-
-
-        if (!empty ($_FILES['SelectImagen']['name'])) {
-            move_uploaded_file($archivo_origen, $archivo_final);
-            $_SESSION['usuario']['Avatar'] = $_FILES['SelectImagen']['name'];
-        }
-
-        if ($_POST['nombre'] != "" && $_POST['email'] != ""
-            && $_POST['firma'] != ""
-        ) {
-
-            $sql2 = ("UPDATE usuario SET Nombre = '" . $_POST['nombre'] . "', Email = '" . $_POST['email'] . "', Firma = '" . $_POST['firma'] . "', Avatar = '" . $archivo_final . "' WHERE Login = " . $_SESSION['usuario']['Login']);
-            $cons2 = $conexion->ejecutar_consulta($sql2);
-
-            $_SESSION['usuario']['Nombre'] = $_POST['nombre'];
-            $_SESSION['usuario']['Email'] = $_POST['email'];
-            $_SESSION['usuario']['Firma'] = $_POST['firma'];
-
-            echo "Los datos de la cuenta se han cambiado correctamente<br>";
-        } else {
-            print "No se permiten campos vacios.<br>";
-        }
-
-
-        $passOld = $_POST['passwordOld'];
-        $passNew = $_POST['passwordNew'];
-        $passNewRep = $_POST['passwordNewRep'];
-        if ($passOld != "" && $passNew != "" && $passNewRep != "") {
-            $passOld = md5($passOld);
-
-            if (($passOld == $_SESSION['usuario']['Password']) && ($passNew == $passNewRep)) {
-                $passNew = md5($passNew);
-
-                $sql3 = ("UPDATE usuario SET Password = '" . $passNew . "' WHERE Login = " . $_SESSION['usuario']['Login']);
-                $cons3 = $conexion->ejecutar_consulta($sql3);
-
-                $_SESSION['usuario']['Password'] = $passNew;
-
-                echo "La contraseña ha sido modificada correctamente.";
-
-            } else {
-                echo "Las contraseñas no coinciden.";
-            }
-
-        } else {
-            echo "La contraseña no ha sido modificada.";
-        }
-
-    }
-    ?>
-
-    <?php
-    include_once("menuPags.php");
-    ?>
-    <form method="post" class="editar" enctype="multipart/form-data">
-        <div class="avisoeditar">Editar perfil</div>
-        <div class="aviso2">Datos de la Cuenta</div>
-
-        <div>
-            <label>Usuario: <?php echo $_SESSION['usuario']['Login'] ?>
-            </label>
-
-        </div>
-        <div>
-            <label>Subir un nuevo avatar *</label><br>
-            <input type="file" name="SelectImagen">
-
-            <?php
-            $avatar = $_SESSION['usuario']['Avatar'];
-            echo '<img class="imagen" src="images/' . $avatar . '">';
-            ?>
-
-        </div>
-
-        <div>
-            <label>Nombre </label>
-            <input id="nombre" name="nombre" type="text" value="<?php echo $_SESSION['usuario']['Nombre'] ?>">
-        </div>
-
-        <div>
-            <label>Email </label>
-            <input id="email" name="email" type="text" value="<?php echo $_SESSION['usuario']['Email'] ?>">
-            </br>
-            <p>(Es importante introducir una dirección de correo real.</p>
-        </div>
-
-        <div>
-            <label>Firma personal </label>
-            <input id="firma" name="firma" type="text" value="<?php echo $_SESSION['usuario']['Firma'] ?>">
-            </br>
-            <p>(La firma es su distintivo personal que se mostrará al pie de sus
-                comentarios y mensajes)</p>
-        </div>
-
-        <div class="aviso2">Cambiar Contraseña</div>
-        <div>
-            <label>Contraseña Antigua </label>
-            <input id="password" name="passwordOld" type="password">
-        </div>
-        <div>
-            <label>Contraseña Nueva </label>
-            <input id="password" name="passwordNew" type="password">
-        </div>
-
-        <div>
-            <label>Repita Contraseña Nueva </label>
-            <input id="password" name="passwordNewRep" type="password">
-        </div>
-
-        <div>
-            <div class="botones">
-            <button onclick="parent.location.href='editar2.0.php'">Cancelar</button>
-            <input type="submit" name="aceptar" value="Aceptar">
-                </div>
-        </div>
-    </form>
+<div class="fondo">
+	<div class="container container-local mdl-layout mdl-js-layout has-drawer is-upgraded">
+		<?php include_once ("menu.php")?>
+	<main class="mdl-layout__content">
+		<div class="grid mdl-grid">
+			<div class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+				<div class="mdl-card__media mdl-color-text--grey-50">
+					<img id="fotoPortada" alt="" src="images/portada.png">
+				</div>
+					<?php 
+					guardarPerfil();
+					mostrarPerfil();
+					?>		
+				<div class="errores">
+					<span id="rePasswordError"></span>
+				</div>		
+				<div class="mdl-card__supporting-text inputs ">	
+					<div class="mdl-card centro mdl-cell mdl-cell--6-col ">
+							<span class="input input--efecto"> 
+							 <input class="input__field input__field--efecto" type="password" id="password" name="password">
+								 <label class="input__label input__label--efecto" for="password">
+								  <span class="input__label-content input__label-content--efecto password">Password</span>
+								</label>
+						 <svg class="graphic graphic--efecto" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+							<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+							<path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+						</svg>
+						</span>
+					</div>
+						
+					<div class="mdl-card centro mdl-cell mdl-cell--6-col">
+							<span class="input input--efecto">
+							 <input class="input__field input__field--efecto" type="password" id="rePassword" name="rePassword">
+								 <label class="input__label input__label--efecto" for="rePassword"> 
+									<span class="input__label-content input__label-content--efecto rePassword">Repetir Password</span>
+								</label>
+							<svg class="graphic graphic--efecto" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+								<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+								<path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+							</svg>
+							</span>
+						</div>
+					</div>	
+						
+						
+					<div class="mdl-card__actions mdl-card--border" style="text-align: center;">
+						<button type="submit" id="guardar" name="guardar"
+							class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect btnAviso">Guardar Cambios</button>
+					</div>	
+				</form>
+			</div>
+		</div>
+		<?php include_once ("footer.php")?>	
+		 </main>
+	</div>
+</div>
 </body>
 </html>

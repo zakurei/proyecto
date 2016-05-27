@@ -16,7 +16,7 @@
 <link rel="stylesheet"
 	href="https://code.getmdl.io/1.1.3/material.grey-orange.min.css">
 
-<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="css/styles.css">
 <script src="js/material.min.js"></script>
 <script src="js/material.min.js.map"></script>
 <script src="js/material.js"></script>
