@@ -35,7 +35,7 @@ body .container {
 }
 
 .container .grid {
-	max-width: 900px;
+	max-width: 67%;
 	padding: 0;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -45,6 +45,7 @@ body .container {
 	-webkit-flex-shrink: 0;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
+	margin-bottom:50px; 
 }
 
 .container.mdl-layout .mdl-layout__content {
@@ -133,6 +134,7 @@ a:-webkit-any-link {
 /**************FOOTER*************/
 /*********************************/
 .mdl-mini-footer {
+	height: 90px; 
 	margin-top: 40px;
 	padding: 40px;
 	-webkit-align-items: center;
@@ -648,7 +650,6 @@ a:-webkit-any-link {
 /*********************************/
 #home img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
 #home ul {

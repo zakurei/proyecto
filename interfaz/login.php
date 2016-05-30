@@ -1,11 +1,9 @@
 <?php
 session_start ();
-include_once ("../modelo/conexion.php");
-include_once ("../controladores/login.php");
-login();
-if (isset ( $_SESSION ['logueado'] ) && $_SESSION ['logueado']) {
-	header ( "Location: index.php" );
-}
+include_once ("../logica/sesionYes.php");
+include_once ("../conexion/conexion.php");
+include_once ("../logica/login.php");
+$respuesta = login();
 ?>
 <!doctype html>
 <html lang="en">
@@ -34,7 +32,8 @@ include_once ("head.php");
 					</div>
 					<form method="post" class="login">
 						<div class="errores">
-							<span id="usuarioError"></span>
+						    <?php $respuesta?>
+						    <span id="usuarioError"></span>
 						    <span id="passwordError"></span>
 					 	</div>
 					<div class="mdl-color-text--grey-700 mdl-card__supporting-text ">

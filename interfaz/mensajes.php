@@ -4,9 +4,9 @@
 <head>
 <?php
 include_once ("head.php");
-include_once ("../modelo/conexion.php");
-include_once ("../controladores/tops.php");
-include_once ("../controladores/mensajes.php");
+include_once ("../conexion/conexion.php");
+include_once ("../logica/tops.php");
+include_once ("../logica/mensajes.php");
 ?>
 
 <title>Mensajes</title>

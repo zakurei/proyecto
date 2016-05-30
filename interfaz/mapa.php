@@ -19,7 +19,7 @@
       
 			<?php include_once ("menu.php")?>
 
-	<div id="map" style="width: 1440px; height: 611px;"></div>
+	<div id="map" style="width: 100%; height: 100%;"></div>
 	
 	<?php include_once ("footer.php")?>
 		

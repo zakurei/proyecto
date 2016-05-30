@@ -62,7 +62,7 @@ function comentarios() {
 		
 		echo '
 			<header class="headerComent">
-				<img src="../images/usuarios/' . $imagenUsuario . '" class="avatarMsg">
+				<img src="images/usuarios/' . $imagenUsuario . '" class="avatarMsg">
 					<div class="autor">
 						<strong>' . $nombreUsuario . '</strong> <span>2 days ago</span>
 					</div>
@@ -83,7 +83,7 @@ function enviarComentario(){
 			$idUsuario = $_SESSION ['usuario'] ['id'];
 			$idLocal = $_GET['id'];
 				
-			$sql = "INSERT INTO comentarios (comentario,id_usuarios,id_locales) VALUES ('$comentario','$idUsuario','$idLocal')";
+			$sql = "INSERT INTO comentarios (comentario,id_usuarios,id_locales) VALUES ('$comentario',$idUsuario,$idLocal)";
 			$cons = $conexion->ejecutar_consulta($sql);
 				
 			$semaforo = '<a id="localGaleria" class="mdl-button mdl-js-button mdl-js-ripple-effect btnAviso"
@@ -95,7 +95,6 @@ function enviarComentario(){
 	}					
 							echo '</form>';
 							if (isset($_POST['enviar'])){
-								echo $sql;
 								echo $semaforo;
 							}
 }

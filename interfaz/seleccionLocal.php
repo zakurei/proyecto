@@ -4,8 +4,8 @@
 <head>
 <?php
 include_once ("head.php");
-include_once ("../modelo/conexion.php");
-include_once ("../controladores/seleccionLocal.php");
+include_once ("../conexion/conexion.php");
+include_once ("../logica/seleccionLocal.php");
 
 ?>
 

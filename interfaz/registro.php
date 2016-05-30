@@ -1,10 +1,8 @@
 <?php
 session_start();
-include_once ("../modelo/conexion.php");
-include_once ("../controladores/registro.php");
-if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
-	header("Location: index.php");
-}
+include_once ("../logica/sesionYes.php");
+include_once ("../conexion/conexion.php");
+include_once ("../logica/registro.php");
 ?>
 <!doctype html>
 <html lang="en">

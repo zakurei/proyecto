@@ -4,8 +4,8 @@
 <head>
 <?php 
 include_once ("head.php");
-include_once ("../modelo/conexion.php");
-include_once ("../controladores/local.php");
+include_once ("../conexion/conexion.php");
+include_once ("../logica/local.php");
 ?>
 <title>Local</title>
 
@@ -61,7 +61,7 @@ include_once ("../controladores/local.php");
 						</div>
 					</div>
 					
-					<?php include_once ("slider.php")  ?>
+					<?php include_once ("../logica/slider.php")  ?>
 					<br/>
 					<div class="mdl-color-text--primary-contrast mdl-card__supporting-text containerComents">
 						<form method="post" class="mensaje">

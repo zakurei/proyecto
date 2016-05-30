@@ -4,7 +4,7 @@
 <?php
 //Usuarios registrados/admin.
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true){
- 	include_once ('../controladores/menu.php');
+ 	include_once ('../logica/menu.php');
 	include_once ("../controladores/breadCrumbs.php");
 	
 	echo '
@@ -36,7 +36,7 @@ if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true){
 			'.$editar.'	
 			<a id="contacto" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="contacto.php"><div class="material-icons">email</div></a>
 			<div class="mdl-tooltip" for="contacto">Contacto</div>
-			<a id="salir" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="cerrarSesion.php"><div class="material-icons">account_circle</div></a>						
+			<a id="salir" class="mdl-color-text--white mdl-button mdl-js-button mdl-js-ripple-effect" href="../logica/cerrarSesion.php"><div class="material-icons">account_circle</div></a>						
 			<div class="mdl-tooltip" for="salir">Salir</div>					
 		';
 	

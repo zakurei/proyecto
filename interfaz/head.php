@@ -27,9 +27,9 @@
 <script>
 
 $(document).ready(function(){
-	var pepe = $(document).find("title").text();
+	var migas = $(document).find("title").text();
 
-	 $('#breadCrumb').html(pepe);
+	 $('#breadCrumb').html(migas);
 	 
 });
 </script>

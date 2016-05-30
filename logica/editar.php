@@ -3,7 +3,7 @@ function mostrarPerfil() {
 	$usuario = $_SESSION ['usuario'] ['nombre'];
 	$email = $_SESSION ['usuario'] ['email'];
 	$avatar = $_SESSION ['usuario'] ['avatar'];
-	
+	 
 	echo '
 	<form method="post" class="editar" enctype="multipart/form-data">
 	  <div class="mdl-card centro mdl-cell mdl-cell--12-col">
@@ -62,18 +62,18 @@ function guardarPerfil() {
 		
 		if (empty($_POST ['password'] )){
 			$password = $_SESSION ['usuario'] ['password'];
+			$mdPass = $password;
 		} else{
 			$_SESSION['usuario']['password'] = $_POST ['password'];
 			$password = $_POST ['password'];
+			$mdPass = md5($password);
 		}
 		
-		$mdPass = md5($password);
 			
 		$sql = ("UPDATE usuarios SET nombre = '" . $nombre . "' , password = '" . $mdPass . "', avatar = '" . $avatar . "'  WHERE id = '" . $idUser . "'");
 		$cons = $conexion->ejecutar_consulta ( $sql );
 		
 		echo '<b>Los datos se han guardado correctamente.</b>';
-		echo $sql;
 	}
 }
 

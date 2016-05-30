@@ -11,7 +11,7 @@
 			$cons = $conexion->ejecutar_consulta ($sql);
 				
 			if (mysqli_num_rows($cons) == 0) {
-				echo "<b>El usuario " . $nombre . " no existe</b>";
+				return "<b>El usuario " . $nombre . " no existe</b>";
 			} else {
 		
 				$row = $cons->fetch_assoc ();
@@ -19,7 +19,7 @@
 				$passEncriptadaBD = $row ['password'];
 		
 				if ($passEncriptadaLogin != $passEncriptadaBD) {
-					echo "<b>Contraseña incorrecta.</b>";
+					return "<b>Contraseña incorrecta.</b>";
 				} else {
 					$_SESSION ['logueado'] = true;
 					$_SESSION ['usuario'] ['id'] = $row ['id'];

@@ -1,3 +1,3 @@
 <?php
-header ("Location: vista/index.php");
+header ("Location: interfaz/index.php");
 ?>

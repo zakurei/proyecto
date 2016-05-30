@@ -1,9 +1,7 @@
 <?php session_start();
-include_once ("../modelo/conexion.php");
-include_once ("../controladores/editar.php");
-if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] == false) {
-	header("Location: index.php");
-}
+include_once ("../logica/sesionNo.php");
+include_once ("../conexion/conexion.php");
+include_once ("../logica/editar.php");
 ?>
 <!doctype html>
 <html lang="en">

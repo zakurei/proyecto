@@ -92,7 +92,7 @@
 
 		
 		var icon = {
-				url: "../images/marker.png",
+				url: "images/marker.png",
 			    scaledSize: new google.maps.Size(30, 50), 
 			    origin: null, 
 			    anchor: null,
