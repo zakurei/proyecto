@@ -1,12 +1,14 @@
-<?php session_start();?>
+<?php
+session_start();
+include_once ("../conexion/conexion.php");
+include_once ("../logica/tops.php");
+include_once ("../logica/mensajes.php");
+?>
 <!doctype html>
 <html lang="en">
 <head>
 <?php
 include_once ("head.php");
-include_once ("../conexion/conexion.php");
-include_once ("../logica/tops.php");
-include_once ("../logica/mensajes.php");
 ?>
 
 <title>Mensajes</title>

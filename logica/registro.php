@@ -1,6 +1,9 @@
 <?php
 
 function registrar(){
+	/* Se comprueba que el nombre de usuario no existe en la base de datos y de ser así se recogen los datos
+	 *  y se insertan en la base de datos.
+	 */
 	if (isset($_POST['registrar'])) {
 		$conexion = new conexion();
 		$conn = $conexion->conectar();

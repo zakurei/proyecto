@@ -1,5 +1,8 @@
 <?php
 	function login(){
+		/* Se comprueba que el usuario existe en la base de datos y que la contraseña es la correcta,
+			 se recogen los datos del usuario de la base de datos y se guardan en sesión.
+		*/
 		if (isset ( $_POST ['login'] )) {
 			$conexion = new conexion ();
 			$conn = $conexion->conectar ();

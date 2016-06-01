@@ -49,3 +49,6 @@
 							LIMIT 10' at line 4
 [23/05/2016 07:26:05] Unknown column 'coco_bongos' in 'where clause'
 [23/05/2016 07:26:05] Unknown column 'coco_bongos' in 'where clause'
+[30/05/2016 15:06:05] Unknown column 'si' in 'where clause'
+[31/05/2016 08:14:27] Unknown column 'loc.avatar' in 'field list'
+[31/05/2016 08:14:29] Unknown column 'loc.avatar' in 'field list'

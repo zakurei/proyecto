@@ -1,4 +1,8 @@
-<?php session_start()?>
+<?php
+session_start();
+include_once ("../logica/home.php");
+$respuesta = boton();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,13 +20,13 @@
 			<div class="topHome">
 				<div class="topHomeTexto mdl-typography--text-center"><br/>
 					<img src="images/logoMenu.png" class="logo" style="width:500px; height:100px;"><br/>
-					<a
-						class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent"
+					<a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent"
 						href="#intro"> <i class="material-icons">keyboard_arrow_down</i>
 					</a>
 				</div>
 			</div>
 			<div id="intro" class="mdl-grid centroHome">
+				<?php echo $respuesta?>
 				<div class="centroHomeIntro mdl-cell mdl-cell--12-col">
 					<p class="mdl-typography--headline">En esta web tienes a tu
 						disposición información actual sobre los mejores locales de

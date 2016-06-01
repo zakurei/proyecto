@@ -1,4 +1,5 @@
 <?php
+// Se comprueba si hay un usuario logueado para mostrar su avatar y nombre en el menú y la opción de editar perfil.
 error_reporting(null);
 $avatar = $_SESSION['usuario']['avatar'];
 $nombre = $_SESSION['usuario']['nombre'];

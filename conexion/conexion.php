@@ -56,7 +56,7 @@ class conexion{
 
     private function RegError(){
         $fallo = mysqli_error($this->conexion);
-        $errores = fopen("Log_Errores.txt", "a");
+        $errores = fopen("../Log_Errores.txt", "a");
         fwrite($errores, "[" . date("d/m/Y H:i:s") . "] " . $fallo . "\n");
         fclose($errores);
     }

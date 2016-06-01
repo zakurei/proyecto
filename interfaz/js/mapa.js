@@ -1,5 +1,5 @@
-/*Creando mapa de los locales de magaluf usando la api de google, instroduzco la información de lo que
- * irá en los marker de los locales y la geolocalización de cada local en el array location,
+/*Creando mapa de los locales de magaluf usando la api de google, introduzco la información de lo que
+ * irá en los marker de los locales y la geolocalización de cada local en el array locations,
  * en la variable map introduzco el centro del foco del mapa, tipo de mapa que usaremos y si 
  * necesitamos zoom o no, en la variable icon instroduciremos la imagen del puntero y su tamaño,
  * y creamos un bucle para recorrer el array e ir pintando los datos de cada local en su sitio.
@@ -76,7 +76,7 @@
 						  	, 39.509771, 2.537148, 17],
 						  	
 						 ["<div id='marker'><h3 class='markerh3'><i>Morgans</i></h3>" + 
-/*Morgans*/	  		  "<b>HAVE FUN!!!!!</b><br/>"  
+/*Morgans*/	  		  	  "<b>HAVE FUN!!!!!</b><br/>"  
 						  	, 39.509996, 2.532634, 17] 	 	
 			                       
 		               ];

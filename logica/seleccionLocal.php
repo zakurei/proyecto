@@ -1,5 +1,6 @@
 <?php
 	function seleccionLocal(){
+		// Se recogen id,nombre e imagen de los locales de la base de datos para generar la galería de locales.
 		$conexion = new conexion();
 		$conn = $conexion->conectar();
 		
@@ -10,6 +11,9 @@
 			$id =  $row->id;
 			$imagen = $row->imagen;
 			$nombre = $row->nombre;
+			/* Se reemplazan los espacios por _ para pasarlos por url al seleccionar un local
+			ya que los necesitaremos de esta manera en la página local.php
+			*/
 			$nombreId= str_replace(' ', '_', $nombre);
 				
 			echo '

@@ -1,12 +1,13 @@
-<?php session_start()?>
+<?php 
+session_start();
+include_once ("../conexion/conexion.php");
+include_once ("../logica/local.php");
+$respuesta = votar();
+?>
 <!doctype html>
 <html lang="en">
 <head>
-<?php 
-include_once ("head.php");
-include_once ("../conexion/conexion.php");
-include_once ("../logica/local.php");
-?>
+<?php  include_once ("head.php");?>
 <title>Local</title>
 
 </head>
@@ -21,24 +22,20 @@ include_once ("../logica/local.php");
 			<div class="grid mdl-grid">
 				<div class="mdl-card centro mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 					<div class="mdl-card__media mdl-color-text--grey-50">	
-					<?php 
-					//Tratamos los nombre ya que los recogemos con _ de la url.
-					$nombre = $_GET["name"];
-					$nombreImagen = str_replace('_', '', $nombre);
-					$titulo= str_replace('_', ' ', $nombre);
-					echo '
-						<img id="fotoLocal" alt="local" src="images/galeriaLocales/'.$nombreImagen.'.jpg">
-						<h3><b id="tituloLocal">'.$titulo.'</b></h3>
-						';
-					?>
+					<?php nombreTitulo();?>
 					</div>
 					
+					<form method="post" class="voto" id="voto">
 					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-					<div class="meta__favorites favorito">
-					<?php likes();?>
-					<i class="material-icons" role="presentation">favorite</i>
+						<div class="meta__favorites favorito">
+							<?php likes();?>
+							<button type="submit" class="mdl-button btnLike" name="voto">
+								 <i class="material-icons" role="presentation">favorite</i>
+							</button>
 						</div>
 					</div>
+					<?php echo $respuesta?>
+					</form>
 					
 					<div class="mdl-color-text--grey-700 mdl-card__supporting-text infoLocal">
 						  <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">

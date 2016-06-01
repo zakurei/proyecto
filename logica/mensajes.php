@@ -18,6 +18,9 @@ function mensajes(){
 		$imagenUsuario = $row->avatar;
 		$comentario = $row->comentario;
 		$nombre = $row->loc_nombre;
+		/* Se reemplazan los espacios de los nombres de los locales por _ ya que los nombres de las carpetas que contienen 
+		 * las imagenes para cada local están escritos con _. Ej: panama_jack
+		*/
 		$nombreLink = str_replace ( ' ', '_', $nombre );
 	
 		echo '
