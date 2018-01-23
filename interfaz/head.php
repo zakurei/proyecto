@@ -14,7 +14,7 @@
 
 <script src="js/material.min.js"></script>
 <script src="js/material.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
 $(document).ready(function(){
